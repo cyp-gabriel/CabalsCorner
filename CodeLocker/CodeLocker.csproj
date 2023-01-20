@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>CabalsCorner.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <ApplicationIcon>Lock (27).ico</ApplicationIcon>
+    <PackageId>CabalsCorner.$(AssemblyName)</PackageId>
+    <Title>CodeLocker</Title>
+    <Authors>CabalsCorner.$(AssemblyName)</Authors>
+    <Company>Cabal's Corner Software</Company>
+    <Description>Password encryption by Time Life Books.</Description>
+    <Copyright>Mai Balz</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="gorilla-support.jpg" />
+    <None Remove="Resources\gorilla-support1.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\gorilla-support.jpg" />
+    <EmbeddedResource Include="Resources\gorilla-support1.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Controls\Controls.csproj" />
+    <ProjectReference Include="..\UIUtilities\UIUtilities.csproj" />
+    <ProjectReference Include="..\Utilities\Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.IdentityModel" Version="7.0.0" />
+  </ItemGroup>
+
+</Project>

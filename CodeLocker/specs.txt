@@ -1,0 +1,6 @@
+code types:
+1. numeric
+2. numbers and letters
+3. manual code
+
+
